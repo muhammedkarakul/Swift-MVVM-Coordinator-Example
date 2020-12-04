@@ -56,15 +56,47 @@
 		5782E5F325790DB700E000FA /* Coordinator Example */ = {
 			isa = PBXGroup;
 			children = (
-				5782E5F425790DB700E000FA /* AppDelegate.swift */,
-				5782E5F625790DB700E000FA /* SceneDelegate.swift */,
-				5782E5F825790DB700E000FA /* ViewController.swift */,
+				57A5FD232579FB95005F6828 /* ViewModel */,
+				57A5FD222579FB85005F6828 /* Model */,
+				57A5FD212579FB5D005F6828 /* View */,
+				5782E6102579139600E000FA /* SupportingFiles */,
 				5782E5FA25790DB700E000FA /* Main.storyboard */,
-				5782E5FD25790DB800E000FA /* Assets.xcassets */,
 				5782E5FF25790DB800E000FA /* LaunchScreen.storyboard */,
-				5782E60225790DB800E000FA /* Info.plist */,
 			);
 			path = "Coordinator Example";
+			sourceTree = "<group>";
+		};
+		5782E6102579139600E000FA /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5782E5F625790DB700E000FA /* SceneDelegate.swift */,
+				5782E5F425790DB700E000FA /* AppDelegate.swift */,
+				5782E5FD25790DB800E000FA /* Assets.xcassets */,
+				5782E60225790DB800E000FA /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		57A5FD212579FB5D005F6828 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5782E5F825790DB700E000FA /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57A5FD222579FB85005F6828 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57A5FD232579FB95005F6828 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +319,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Coordinator Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Coordinator Example/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +338,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Coordinator Example/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Coordinator Example/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
