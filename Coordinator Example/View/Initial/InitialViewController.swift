@@ -7,12 +7,26 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .white
+class InitialViewController: BaseViewController<InitialView> {
+    
+    override func linkInteractor() {
+        super.linkInteractor()
+        baseView?.delegate = self
+    }
+    
+    override func configureApperance() {
         title = "Initial View"
     }
 }
 
+// InitialViewDelegate
+extension InitialViewController: InitialViewDelegate {
+    func initialView(_ view: InitialView, didTapLoginButton button: UIButton) {
+        print("LOGIN BUTTON TAPPED")
+        
+    }
+    
+    func initialView(_ view: InitialView, didTapRegisterButton button: UIButton) {
+        print("REGISTER BUTTON TAPPED")
+    }
+}
