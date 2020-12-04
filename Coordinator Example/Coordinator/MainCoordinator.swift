@@ -21,4 +21,16 @@ class MainCoordinator: Coordinator {
         initialViewController.coordinator = self
         navigationController.pushViewController(initialViewController, animated: true)
     }
+    
+    func login() {
+        let loginViewController = LoginViewController()
+        loginViewController.coordinator = self
+        navigationController.pushViewController(loginViewController, animated: true)
+    }
+    
+    func register() {
+        let registerViewController = RegisterViewController()
+        registerViewController.coordinator = self
+        navigationController.pushViewController(registerViewController, animated: true)
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitialViewController: BaseViewController<InitialView> {
+final class InitialViewController: BaseViewController<InitialView> {
     
     override func linkInteractor() {
         super.linkInteractor()
@@ -22,11 +22,11 @@ class InitialViewController: BaseViewController<InitialView> {
 // InitialViewDelegate
 extension InitialViewController: InitialViewDelegate {
     func initialView(_ view: InitialView, didTapLoginButton button: UIButton) {
-        print("LOGIN BUTTON TAPPED")
+        coordinator?.login()
         
     }
     
     func initialView(_ view: InitialView, didTapRegisterButton button: UIButton) {
-        print("REGISTER BUTTON TAPPED")
+        coordinator?.register()
     }
 }
