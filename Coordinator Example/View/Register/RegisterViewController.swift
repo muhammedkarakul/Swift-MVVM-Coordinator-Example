@@ -7,5 +7,5 @@
 
 import UIKit
 
-final class RegisterViewController: BaseViewController<RegisterView> {
+final class RegisterViewController: BaseViewController<RegisterView, RegisterCoordinator> {
 }

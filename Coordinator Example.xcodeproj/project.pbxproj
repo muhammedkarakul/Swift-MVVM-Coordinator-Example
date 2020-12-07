@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5753F400257DAC60008887D3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753F3FF257DAC60008887D3 /* LoginCoordinator.swift */; };
+		5753F404257DAD82008887D3 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5753F403257DAD82008887D3 /* RegisterCoordinator.swift */; };
 		5757A3F1257A436A006308FB /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5757A3F0257A436A006308FB /* BaseView.swift */; };
 		57685608257A49B200C31509 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57685607257A49B200C31509 /* BaseViewController.swift */; };
 		5768560E257A4E4D00C31509 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5768560D257A4E4D00C31509 /* LoginViewController.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		07FA72019A120326AF47D08B /* Pods-Coordinator Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coordinator Example.debug.xcconfig"; path = "Target Support Files/Pods-Coordinator Example/Pods-Coordinator Example.debug.xcconfig"; sourceTree = "<group>"; };
+		5753F3FF257DAC60008887D3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		5753F403257DAD82008887D3 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		5757A3F0257A436A006308FB /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		57685607257A49B200C31509 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		5768560D257A4E4D00C31509 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			children = (
 				5768560D257A4E4D00C31509 /* LoginViewController.swift */,
 				57685617257A4F0400C31509 /* LoginView.swift */,
+				5753F3FF257DAC60008887D3 /* LoginCoordinator.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			children = (
 				57685610257A4E5900C31509 /* RegisterViewController.swift */,
 				5768561A257A4F0F00C31509 /* RegisterView.swift */,
+				5753F403257DAD82008887D3 /* RegisterCoordinator.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -299,10 +305,12 @@
 			files = (
 				5768561B257A4F0F00C31509 /* RegisterView.swift in Sources */,
 				57685611257A4E5900C31509 /* RegisterViewController.swift in Sources */,
+				5753F404257DAD82008887D3 /* RegisterCoordinator.swift in Sources */,
 				57A5FD28257A0753005F6828 /* Coordinator.swift in Sources */,
 				5782E5F925790DB700E000FA /* InitialViewController.swift in Sources */,
 				5782E5F525790DB700E000FA /* AppDelegate.swift in Sources */,
 				5757A3F1257A436A006308FB /* BaseView.swift in Sources */,
+				5753F400257DAC60008887D3 /* LoginCoordinator.swift in Sources */,
 				5768560E257A4E4D00C31509 /* LoginViewController.swift in Sources */,
 				57685615257A4ED200C31509 /* InitialView.swift in Sources */,
 				57685608257A49B200C31509 /* BaseViewController.swift in Sources */,

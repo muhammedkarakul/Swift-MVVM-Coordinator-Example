@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+final class MainCoordinator: Coordinator {
+    var parentCoordinator: Coordinator?
     var childCoordinators = [Coordinator]()
     
     var navigationController: UINavigationController
@@ -23,14 +24,16 @@ class MainCoordinator: Coordinator {
     }
     
     func login() {
-        let loginViewController = LoginViewController()
-        loginViewController.coordinator = self
-        navigationController.pushViewController(loginViewController, animated: true)
+        let loginCoordinator = LoginCoordinator(navigationController: navigationController)
+        loginCoordinator.parentCoordinator = self
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
     }
     
     func register() {
-        let registerViewController = RegisterViewController()
-        registerViewController.coordinator = self
-        navigationController.pushViewController(registerViewController, animated: true)
+        let registerCoordinator = RegisterCoordinator(navigationController: navigationController)
+        registerCoordinator.parentCoordinator = self
+        childCoordinators.append(registerCoordinator)
+        registerCoordinator.start()
     }
 }
