@@ -7,19 +7,22 @@
 
 import UIKit
 
-class BaseViewController<T: BaseView>: UIViewController {
+class BaseViewController<T: BaseView, C: Coordinator>: UIViewController {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: C?
     
     var baseView: T? {
-        view as? T
+        set {
+            view = newValue
+        }
+        get {
+            view as? T
+        }
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-        view = T()
-        
+        baseView = T()
         linkInteractor()
         configureApperance()
         prepareLayout()
@@ -27,6 +30,11 @@ class BaseViewController<T: BaseView>: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        coordinator?.parentCoordinator?.didFinishChild(coordinator)
     }
     
     func linkInteractor() {

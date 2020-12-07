@@ -7,5 +7,5 @@
 
 import UIKit
 
-final class LoginViewController: BaseViewController<LoginView> {
+final class LoginViewController: BaseViewController<LoginView, LoginCoordinator> {
 }
